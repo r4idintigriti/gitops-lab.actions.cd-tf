@@ -14,15 +14,6 @@ terraform {
   }
 }
 
-provider "azurerm" {
-  features {}
- 
-  subscription_id = var.AZURE_SUBSCRIPTION_ID
-  client_id       = var.AZURE_CLIENT_ID
-  client_secret   = var.AZURE_CLIENT_SECRECT
-  tenant_id       = var.AZURE_TENANT_ID
-}
-
 variable "client_id" {
 }
 variable "client_secret" {
@@ -30,6 +21,15 @@ variable "client_secret" {
 variable "subscription_id" {
 }
 variable "tenant_id" {
+}
+
+provider "azurerm" {
+  features {}
+ 
+  subscription_id = var.subscription_id
+  client_id       = var.client_id
+  client_secret   = var.client_secret
+  tenant_id       = var.tenant_id
 }
 
 variable "RG" {
