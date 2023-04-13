@@ -14,6 +14,17 @@ terraform {
   }
 }
 
+variable "client_id" {
+}
+variable "client_secret" {
+}
+variable "subscription_id" {
+}
+variable "tenant_id" {
+}
+variable "admin_pwd" {
+}
+
 provider "azurerm" {
     features { }
   
@@ -27,15 +38,6 @@ variable "RG" {
     default = "RG4-joren"
 }
 
-variable "client_id" {
-}
-variable "client_secret" {
-}
-variable "subscription_id" {
-}
-variable "tenant_id" {
-}
-
 variable "VM" {
     default = "VM1-joren"
 }
@@ -46,9 +48,6 @@ variable "VNET_ADDRESS" {
 
 variable "SUBNET_ADDRESS" {
     default = "10.10.0.0/24"
-}
-
-variable "admin_pwd" {
 }
 
 resource "azurerm_resource_group" "RG" {
