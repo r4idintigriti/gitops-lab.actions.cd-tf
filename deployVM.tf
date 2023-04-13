@@ -153,7 +153,7 @@ resource "azurerm_virtual_machine" "VM1" {
     os_profile {
       computer_name = "VM1"
       admin_username = "u2uadmin"
-      admin_password = var.ADMIN_PWD
+      admin_password = var.admin_pwd
     }
 
     os_profile_windows_config {
