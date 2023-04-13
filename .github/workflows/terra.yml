@@ -3,7 +3,7 @@ name: 'Terraform'
 on:
   push:
     branches: [ main ]
-    paths: [deployVM.tf, .github/workflows/terraform.yml] 
+    paths: [deployVM.tf, .github/workflows/terra.yml] 
     
 env:
   TF_VAR_subscription_id: ${{secrets.AZURE_SUBSCRIPTION_ID}}
