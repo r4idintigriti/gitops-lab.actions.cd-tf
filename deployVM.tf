@@ -17,10 +17,10 @@ terraform {
 provider "azurerm" {
   features {}
  
-  subscription_id = var.subscription_id
-  client_id       = var.client_id
-  client_secret   = var.client_secret
-  tenant_id       = var.tenant_id
+  subscription_id = var.AZURE_SUBSCRIPTION_ID
+  client_id       = var.AZURE_CLIENT_ID
+  client_secret   = var.AZURE_CLIENT_SECRECT
+  tenant_id       = var.AZURE_TENANT_ID
 }
 
 variable "client_id" {
@@ -153,7 +153,7 @@ resource "azurerm_virtual_machine" "VM1" {
     os_profile {
       computer_name = "VM1"
       admin_username = "u2uadmin"
-      admin_password = var.admin_pwd
+      admin_password = var.ADMIN_PWD
     }
 
     os_profile_windows_config {
